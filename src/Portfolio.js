@@ -628,9 +628,9 @@ export default function Portfolio() {
                                 className="absolute inset-2 rounded-full overflow-hidden border-4 border-gray-900 shadow-2xl"
                             >
                                 <img
-                                    src="/profile.png"
+                                    src="/Profile.jpeg"
                                     alt="Sujith Balaji A"
-                                    className="w-full h-full object-cover"
+                                    className="w-70 h-80 rounded-full object-cover mx-auto shadow-lg"
                                 />
                             </motion.div>
 
