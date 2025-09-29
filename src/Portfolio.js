@@ -1,6 +1,6 @@
 // import { useState } from "react";
 // import { motion } from "framer-motion";
-// import { Linkedin, Phone, Mail, Moon, Sun, ArrowRight, Code, Database, Bot } from "lucide-react";
+// import { Linkedin, Phone, Mail, Moon, Sun, ArrowRight, Code, Database, Bot, Briefcase, Calendar } from "lucide-react";
 
 // export default function Portfolio() {
 //     const [darkMode, setDarkMode] = useState(true);
@@ -31,6 +31,33 @@
 //             icon: Bot,
 //             color: "text-pink-500",
 //         },
+//     ];
+
+//     const workExperience = [
+//         {
+//             company: "RoshAI",
+//             position: "Software Test Engineer",
+//             duration: "June 2024 - Present",
+//             responsibilities: [
+//                 "Execute manual and automated test cases for web and desktop applications with full functional coverage",
+//                 "Developed Auto Test Pro, an automation framework and testing tool, using Python Selenium, Flask, React, and CSS",
+//                 "Developed Work Zen Pro, an employee productivity tracker software, using Flask, React, and CSS",
+//                 "Designed and validated AI/ML models using Custom Vision, delivering demos and production deployment",
+//                 "Performed automation testing on desktop applications using Python Selenium, Appium, and WinAppDriver"
+//             ]
+//         },
+//         {
+//             company: "Ivy Mobility Solutions Pvt Ltd",
+//             position: "Junior Test Engineer",
+//             duration: "April 2022 - May 2024",
+//             responsibilities: [
+//                 "Executed manual and automation test cases for web and mobile applications with full functional coverage",
+//                 "Collaborated with web and mobile teams in Agile environments to analyze and resolve issues",
+//                 "Performed regression, sanity, and functional testing logged and tracked defects in Jira to ensure timely resolution",
+//                 "Validated backend data using SQL queries and executed test cases across web, mobile, and database environments",
+//                 "Developed reusable and modular test cases, reducing testing time and enhancing coverage"
+//             ]
+//         }
 //     ];
 
 //     const skillCategories = [
@@ -70,7 +97,7 @@
 //                     className="w-full md:w-1/2 h-screen relative"
 //                 >
 //                     <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-purple-500/20" />
-//                     <img src="/profile.jpg" alt="Sujith Balaji A" className="w-full h-full object-cover" />
+//                     <img src="/profile.png" alt="Sujith Balaji A" className="w-full h-full object-cover" />
 //                     <div className="absolute top-20 left-10 w-32 h-32 bg-sky-400/30 rounded-full blur-3xl" />
 //                     <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-400/30 rounded-full blur-3xl" />
 //                 </motion.div>
@@ -119,7 +146,6 @@
 //                             <a href="mailto:sujithbalajia@gmail.com" className="text-2xl hover:text-sky-400 transition"><Mail size={28} /></a>
 //                             <a href="https://www.linkedin.com/in/sujith-balaji/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-sky-400 transition"><Linkedin size={28} /></a>
 //                             <a href="tel:+919677996675" className="text-2xl hover:text-sky-400 transition"><Phone size={28} /></a>
-
 //                         </div>
 //                     </motion.div>
 //                 </motion.div>
@@ -144,26 +170,95 @@
 //                         whileInView={{ opacity: 1, y: 0 }}
 //                         viewport={{ once: true }}
 //                         transition={{ duration: 0.6 }}
-//                         className="grid md:grid-cols-2 gap-12 items-center"
 //                     >
-//                         <div>
-//                             <h2 className="text-5xl font-bold mb-6">About Me</h2>
-//                             <div className="w-20 h-1 bg-sky-500 mb-6" />
+//                         <h2 className="text-5xl font-bold mb-6 text-center">About Me</h2>
+//                         <div className="w-20 h-1 bg-sky-500 mb-12 mx-auto" />
+//                         <div className="max-w-4xl mx-auto text-center">
 //                             <p className={`text-lg leading-relaxed mb-6 ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
-//                                 Detail-oriented Software Test Engineer passionate about delivering
-//                                 high-quality web, mobile, and desktop solutions. Experienced in
-//                                 building automation frameworks, validating AI/ML models, and
-//                                 collaborating with cross-functional teams to drive impactful results.
+//                                 Detail-oriented Software Test Engineer with 3+ years of experience in Manual and Automation Testing (Python, Selenium, Appium, Agile).
+//                                 Skilled in Functional, Regression, Smoke, Sanity Testing, Test Case Creation, STLC/SDLC, SQL, API Testing, and AI/ML model validation.
 //                             </p>
 //                             <p className={`text-lg leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
-//                                 I thrive in Agile environments and continuously seek to improve testing
-//                                 methodologies and development processes through innovative automation
-//                                 strategies.
+//                                 Experienced in delivering enterprise-level web and mobile solutions, collaborating with cross-functional teams,
+//                                 and ensuring high product quality and performance. I thrive in Agile environments and continuously seek to improve testing
+//                                 methodologies and development processes through innovative automation strategies.
 //                             </p>
 //                         </div>
+//                     </motion.div>
+//                 </div>
+//             </section>
+
+//             {/* Work Experience Section */}
+//             <section id="experience" className={`py-24 px-8 md:px-16 lg:px-32 ${darkMode ? "bg-gray-900" : "bg-gray-100"}`}>
+//                 <div className="max-w-6xl mx-auto">
+//                     <motion.div
+//                         initial={{ opacity: 0, y: 50 }}
+//                         whileInView={{ opacity: 1, y: 0 }}
+//                         viewport={{ once: true }}
+//                         transition={{ duration: 0.6 }}
+//                     >
+//                         <h2 className="text-5xl font-bold mb-12 text-center">Work Experience</h2>
+//                         <div className="w-20 h-1 bg-sky-500 mb-16 mx-auto" />
+
 //                         <div className="relative">
-//                             <img src="/profile.jpg" alt="About" className="rounded-2xl shadow-2xl" />
-//                             <div className="absolute -bottom-6 -right-6 w-full h-full border-4 border-sky-500 rounded-2xl -z-10" />
+//                             {/* Timeline line */}
+//                             <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sky-500 via-purple-500 to-pink-500" />
+
+//                             <div className="space-y-12">
+//                                 {workExperience.map((job, idx) => (
+//                                     <motion.div
+//                                         key={idx}
+//                                         initial={{ opacity: 0, x: -50 }}
+//                                         whileInView={{ opacity: 1, x: 0 }}
+//                                         viewport={{ once: true }}
+//                                         transition={{ duration: 0.6, delay: idx * 0.2 }}
+//                                         className="relative"
+//                                     >
+//                                         {/* Timeline dot */}
+//                                         <div className="hidden md:block absolute left-6 top-10 w-5 h-5 bg-gradient-to-br from-sky-500 to-purple-500 rounded-full border-4 border-gray-900 z-10" />
+
+//                                         <div className={`md:ml-20 ${darkMode ? "bg-gray-800" : "bg-white"} rounded-2xl p-8 shadow-xl border ${darkMode ? "border-gray-700" : "border-gray-200"} hover:shadow-2xl transition-all`}>
+//                                             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+//                                                 <div className="flex items-start gap-4 mb-4 md:mb-0">
+//                                                     <div className={`p-3 rounded-xl ${darkMode ? "bg-sky-500/10" : "bg-sky-100"}`}>
+//                                                         <Briefcase className="text-sky-500" size={28} />
+//                                                     </div>
+//                                                     <div>
+//                                                         <h3 className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
+//                                                             {job.position}
+//                                                         </h3>
+//                                                         <p className={`text-xl font-semibold ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
+//                                                             {job.company}
+//                                                         </p>
+//                                                     </div>
+//                                                 </div>
+//                                                 <div className={`flex items-center gap-2 ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+//                                                     <Calendar size={18} />
+//                                                     <span className="text-sm font-medium">{job.duration}</span>
+//                                                 </div>
+//                                             </div>
+
+//                                             <div className="space-y-3">
+//                                                 {job.responsibilities.map((resp, i) => (
+//                                                     <motion.div
+//                                                         key={i}
+//                                                         initial={{ opacity: 0, x: -20 }}
+//                                                         whileInView={{ opacity: 1, x: 0 }}
+//                                                         viewport={{ once: true }}
+//                                                         transition={{ duration: 0.4, delay: idx * 0.2 + i * 0.1 }}
+//                                                         className="flex items-start gap-3 group"
+//                                                     >
+//                                                         <div className={`mt-2 w-2 h-2 rounded-full flex-shrink-0 ${darkMode ? "bg-sky-400" : "bg-sky-500"}`} />
+//                                                         <p className={`text-base leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
+//                                                             {resp}
+//                                                         </p>
+//                                                     </motion.div>
+//                                                 ))}
+//                                             </div>
+//                                         </div>
+//                                     </motion.div>
+//                                 ))}
+//                             </div>
 //                         </div>
 //                     </motion.div>
 //                 </div>
@@ -171,7 +266,6 @@
 
 //             {/* Skills Section */}
 //             <section id="skills" className={`py-24 px-8 md:px-16 lg:px-32 ${darkMode ? "bg-gray-800/50" : "bg-white"} relative overflow-hidden`}>
-//                 {/* Animated background elements */}
 //                 <motion.div
 //                     animate={{
 //                         rotate: 360,
@@ -226,7 +320,6 @@
 //                                         : "bg-white/80 border-gray-200 hover:border-sky-400/50"
 //                                         }`}
 //                                 >
-//                                     {/* Decorative corner accent */}
 //                                     <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-sky-500/20 to-purple-500/20 rounded-bl-3xl rounded-tr-2xl" />
 
 //                                     <motion.div
@@ -274,7 +367,6 @@
 //                                         ))}
 //                                     </div>
 
-//                                     {/* Progress indicator */}
 //                                     <motion.div
 //                                         initial={{ width: 0 }}
 //                                         whileInView={{ width: "100%" }}
@@ -299,7 +391,7 @@
 //             </section>
 
 //             {/* Projects Section */}
-//             <section className="py-24 px-8 md:px-16 lg:px-32">
+//             <section className={`py-24 px-8 md:px-16 lg:px-32 ${darkMode ? "bg-gray-900" : "bg-gray-100"}`}>
 //                 <div className="max-w-6xl mx-auto">
 //                     <motion.div
 //                         initial={{ opacity: 0, y: 50 }}
@@ -307,15 +399,22 @@
 //                         viewport={{ once: true }}
 //                         transition={{ duration: 0.6 }}
 //                     >
-//                         <h2 className="text-5xl font-bold mb-12">Featured Projects</h2>
+//                         <h2 className="text-5xl font-bold mb-12 text-center">Featured Projects</h2>
+//                         <div className="w-20 h-1 bg-sky-500 mb-16 mx-auto" />
 //                         <div className="grid md:grid-cols-3 gap-8">
 //                             {projects.map((project, i) => (
 //                                 <motion.div
 //                                     key={i}
+//                                     initial={{ opacity: 0, y: 30 }}
+//                                     whileInView={{ opacity: 1, y: 0 }}
+//                                     viewport={{ once: true }}
+//                                     transition={{ duration: 0.5, delay: i * 0.2 }}
 //                                     whileHover={{ y: -10, scale: 1.02 }}
-//                                     className={`p-8 rounded-2xl ${darkMode ? "bg-gray-800" : "bg-white"} shadow-xl hover:shadow-2xl transition-all`}
+//                                     className={`p-8 rounded-2xl ${darkMode ? "bg-gray-800" : "bg-white"} shadow-xl hover:shadow-2xl transition-all border ${darkMode ? "border-gray-700" : "border-gray-200"}`}
 //                                 >
-//                                     <project.icon className={`${project.color} mb-4`} size={48} />
+//                                     <div className={`w-16 h-16 rounded-xl flex items-center justify-center mb-4 ${darkMode ? "bg-gray-700" : "bg-gray-100"}`}>
+//                                         <project.icon className={`${project.color}`} size={40} />
+//                                     </div>
 //                                     <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
 //                                     <p className={darkMode ? "text-gray-300" : "text-gray-600"}>{project.desc}</p>
 //                                 </motion.div>
@@ -337,7 +436,7 @@
 //                         <h2 className="text-5xl font-bold mb-6">Reach Out</h2>
 //                         <div className="w-20 h-1 bg-sky-500 mb-12 mx-auto" />
 
-//                         <img src="/profile.jpg" alt="Contact" className="w-40 h-40 rounded-full mx-auto mb-8 object-cover border-4 border-sky-500" />
+//                         <img src="/Contact.png" alt="Contact" className="w-40 h-40 rounded-full mx-auto mb-8 object-cover border-4 border-sky-500" />
 
 //                         <h3 className="text-3xl font-bold mb-4">Sujith Balaji A</h3>
 //                         <a href="mailto:sujithbalajia@gmail.com" className="text-xl text-sky-400 hover:text-sky-300 mb-8 block">
@@ -347,19 +446,16 @@
 //                         <div className="flex justify-center gap-6 text-3xl mb-12">
 //                             <a href="mailto:sujithbalajia@gmail.com" className="hover:text-sky-400 transition"><Mail size={36} /></a>
 //                             <a href="https://www.linkedin.com/in/sujith-balaji/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition"><Linkedin size={36} /></a>
-//                             <a href="tel:+911234567890" className="text-2xl hover:text-sky-400 transition"><Phone size={36} /></a>
-
+//                             <a href="tel:+919677996675" className="hover:text-sky-400 transition"><Phone size={36} /></a>
 //                         </div>
 
-//                         <p className="text-gray-400">© {new Date().getFullYear()} Sujith • Built with React & Tailwind</p>
+//                         <p className="text-gray-400">© {new Date().getFullYear()} Sujith Balaji A • Built with React & Tailwind</p>
 //                     </motion.div>
 //                 </div>
 //             </section>
 //         </div>
 //     );
 // }
-
-
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -457,12 +553,160 @@ export default function Portfolio() {
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
-                    className="w-full md:w-1/2 h-screen relative"
+                    className="w-full md:w-1/2 h-screen relative flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-purple-500/20" />
-                    <img src="/profile.jpg" alt="Sujith Balaji A" className="w-full h-full object-cover" />
-                    <div className="absolute top-20 left-10 w-32 h-32 bg-sky-400/30 rounded-full blur-3xl" />
-                    <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-400/30 rounded-full blur-3xl" />
+                    {/* Background Graphics */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-purple-500/10" />
+
+                    {/* Animated Background Blobs */}
+                    <motion.div
+                        animate={{
+                            scale: [1, 1.2, 1],
+                            rotate: [0, 90, 0]
+                        }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                        className="absolute top-20 left-10 w-32 h-32 bg-sky-400/20 rounded-full blur-3xl"
+                    />
+                    <motion.div
+                        animate={{
+                            scale: [1, 1.3, 1],
+                            rotate: [0, -90, 0]
+                        }}
+                        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                        className="absolute bottom-20 right-10 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl"
+                    />
+
+                    {/* Floating Shapes */}
+                    <motion.div
+                        animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute top-32 left-16 w-16 h-16 border-2 border-sky-500/30 rounded-lg"
+                    />
+                    <motion.div
+                        animate={{ y: [0, 30, 0], rotate: [360, 180, 0] }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute bottom-40 left-20 w-20 h-20 border-2 border-purple-500/30 rounded-full"
+                    />
+                    <motion.div
+                        animate={{ y: [0, -25, 0], x: [0, 10, 0] }}
+                        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute top-1/2 left-10 w-12 h-12 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-xl rotate-45"
+                    />
+
+                    {/* Grid Pattern */}
+                    <div
+                        className="absolute inset-0 opacity-5"
+                        style={{
+                            backgroundImage: `
+                                linear-gradient(rgba(14, 165, 233, 0.3) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(14, 165, 233, 0.3) 1px, transparent 1px)
+                            `,
+                            backgroundSize: '50px 50px'
+                        }}
+                    />
+
+                    {/* Profile Image - Medium Size with Decorative Frame */}
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="relative z-10"
+                    >
+                        <div className="relative w-80 h-80">
+                            {/* Rotating Border */}
+                            <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                                className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 p-1"
+                            >
+                                <div className="w-full h-full bg-gray-900 rounded-full" />
+                            </motion.div>
+
+                            {/* Profile Image */}
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                className="absolute inset-2 rounded-full overflow-hidden border-4 border-gray-900 shadow-2xl"
+                            >
+                                <img
+                                    src="/profile.png"
+                                    alt="Sujith Balaji A"
+                                    className="w-full h-full object-cover"
+                                />
+                            </motion.div>
+
+                            {/* Decorative Dots around image */}
+                            <motion.div
+                                animate={{ rotate: -360 }}
+                                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                                className="absolute inset-0"
+                            >
+                                <div className="absolute top-0 left-1/2 w-3 h-3 bg-sky-500 rounded-full -translate-x-1/2" />
+                                <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-purple-500 rounded-full -translate-x-1/2" />
+                                <div className="absolute left-0 top-1/2 w-3 h-3 bg-pink-500 rounded-full -translate-y-1/2" />
+                                <div className="absolute right-0 top-1/2 w-3 h-3 bg-sky-500 rounded-full -translate-y-1/2" />
+                            </motion.div>
+                        </div>
+
+                        {/* Skill Badges Floating Around */}
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 3, repeat: Infinity }}
+                            className="absolute -top-6 left-8 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                        >
+                            Python
+                        </motion.div>
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+                            className="absolute -top-6 right-8 bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                        >
+                            Selenium
+                        </motion.div>
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                            className="absolute -bottom-6 left-12 bg-gradient-to-r from-pink-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                        >
+                            React
+                        </motion.div>
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+                            className="absolute -bottom-6 right-12 bg-gradient-to-r from-sky-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                        >
+                            AI/ML
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Decorative Lines */}
+                    <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+                        <motion.line
+                            x1="10%" y1="30%" x2="90%" y2="70%"
+                            stroke="url(#gradient1)"
+                            strokeWidth="2"
+                            initial={{ pathLength: 0 }}
+                            animate={{ pathLength: 1 }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                        />
+                        <motion.line
+                            x1="90%" y1="30%" x2="10%" y2="70%"
+                            stroke="url(#gradient2)"
+                            strokeWidth="2"
+                            initial={{ pathLength: 0 }}
+                            animate={{ pathLength: 1 }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 1.5 }}
+                        />
+                        <defs>
+                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stopColor="#0ea5e9" />
+                                <stop offset="100%" stopColor="#a855f7" />
+                            </linearGradient>
+                            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stopColor="#ec4899" />
+                                <stop offset="100%" stopColor="#8b5cf6" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </motion.div>
 
                 <motion.div
