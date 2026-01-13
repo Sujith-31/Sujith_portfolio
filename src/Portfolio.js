@@ -526,7 +526,7 @@ export default function Portfolio() {
         },
         {
             title: "Web & Tools",
-            skills: ["React", "CSS", "Flask (REST API)", "Jira", "Postman", "Jenkins"]
+            skills: ["React", "CSS", "Flask (REST API)", "Jira", "Postman(GET,POST,PUT,DELETE operations)", "Jenkins"]
         },
         {
             title: "Testing & AI/ML",
@@ -741,7 +741,7 @@ export default function Portfolio() {
                             <motion.a
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                href="/Sujith_A.pdf"
+                                href="/SujithBalaji.pdf"
                                 download
                                 className={`px-8 py-4 rounded-full font-semibold border-2 transition ${darkMode ? "border-gray-600 hover:border-sky-400 hover:text-sky-400" : "border-gray-300 hover:border-sky-500 hover:text-sky-500"}`}
                             >
