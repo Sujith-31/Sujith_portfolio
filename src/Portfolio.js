@@ -211,14 +211,14 @@ export default function Portfolio() {
                             transition={{ duration: 3, repeat: Infinity, delay: 1 }}
                             className="absolute -bottom-6 left-12 bg-gradient-to-r from-pink-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
                         >
-                            Software Testing
+                            Edge cases
                         </motion.div>
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
                             className="absolute -bottom-6 right-12 bg-gradient-to-r from-sky-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
                         >
-                            AI/ML
+                            API Testing
                         </motion.div>
                     </motion.div>
 
