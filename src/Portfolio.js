@@ -191,7 +191,7 @@ export default function Portfolio() {
                             </motion.div>
                         </div>
 
-                        Skill Badges Floating Around
+                        {/* Skill Badges Floating Around */}
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ duration: 3, repeat: Infinity }}
